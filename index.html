@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script src="./assets/js/index.js" defer></script>
+  <title>Portfolio</title>
 </head>
+
 <body>
-    
+  <header>
+    <!-- top -->
+    <div>
+      <!-- logo -->
+      <h1 class="logo">Larsson <span>A.</span></h1>
+      <!-- logo -->
+
+      <!-- navbar -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- navbar -->
+
+      <!-- theme -->
+      <div>
+        <input type="checkbox" id="theme">
+        <label for="theme" class="theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+      <!-- theme -->
+    </div>
+    <!-- top -->
+
+    <!-- progress bar -->
+    <div id="progress">
+      <span></span>
+    </div>
+    <!-- progress bar -->
+  </header>
+
+  <main>
+    <!-- home -->
+    <section id="home">
+      <!-- background -->
+      <div class="home_bg">
+        <div></div>
+      </div>
+      <!-- background -->
+
+      <!-- content -->
+      <div class="home_content">
+        <!-- left -->
+        <div>
+          <h1>Hello,<br> I'm <span>Larsson Apong</span></h1>
+
+          <div>
+            <h2>Front End <span class="anim_home">Developer</span> +</h2>
+            <h2>UX & UI <span class="anim_home">Designer</span> +</h2>
+            <h2>Ethical <span class="anim_home">Hacker</span></h2>
+          </div>
+
+          <p>Explore, create and protect: these are my motivations. In a world consumed by technology, I constantly push
+            beyond my own limits.</p>
+
+          <div>
+            <a href="#contact" class="btn">Contact Me</a>
+            <span class="social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </span>
+          </div>
+        </div>
+        <!-- left -->
+
+        <!-- right -->
+        <div class="home_profile">
+          <div></div>
+          <div></div>
+        </div>
+        <!-- right -->
+      </div>
+      <!-- content -->
+    </section>
+    <!-- home -->
+  </main>
 </body>
+
 </html>

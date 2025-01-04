@@ -1,1 +1,401 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	/* Dark Mode */
+	--primary-color: #5fd1bb;
+	--secondary-color: #111110;
+	--tertiary-color: #19191b;
+	--quaternary-color: #1e1e1e;
+	--quinary-color: #f5f5f5;
+
+	/* Fonts */
+	--primary-font: "Poppins", sans-serif;
+	--secondary-font: "Roboto", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: var(--primary-font);
+}
+
+/* assets */
+.btn {
+	padding: 8px 24px;
+	background-color: transparent;
+	color: var(--primary-color);
+	font-weight: 500;
+	font-size: 14px;
+	border-radius: 24px;
+	border: 2px solid var(--primary-color);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-color: var(--primary-color);
+	color: var(--quinary-color);
+}
+
+@keyframes socialwave {
+	0%{
+		transform: translateY(0rem);
+	}
+	50%{
+		transform: translateY(-1rem);
+	}
+	100%{
+        transform: translateY(0rem);
+    }
+}
+
+.social {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.social a {
+	color: var(--primary-color);
+	height: 34px;
+	width: 34px;
+	font-size: 16px;
+	background: transparent;
+	border: 2px solid var(--primary-color);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+
+	/* animation */
+	animation: socialwave 1s 1 ease-in-out;
+}
+
+.social a:nth-child(1) {
+    animation-delay: 0s;
+}
+.social a:nth-child(2) {
+    animation-delay: 0.25s;
+}
+.social a:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.social a:nth-child(4) {
+	animation-delay: 0.75s;
+}
+
+@keyframes pause {
+    0%, 20% {
+        /* Pendant les premières 3 secondes, l'animation des icônes se produit */
+    }
+    100% {
+        /* Ensuite, on attend 15 secondes avant de recommencer */
+    }
+}
+
+.social a:hover {
+	color: var(--quinary-color);
+	background: var(--primary-color);
+}
+
+/* assets */
+
+/* header */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: var(--tertiary-color);
+	transition: 0.3s;
+}
+
+header>div:first-of-type {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 5rem;
+}
+
+/* logo */
+.logo {
+	font-size: 24px;
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+.logo span {
+	color: var(--quinary-color);
+}
+
+/* logo */
+
+/* navbar */
+.navbar ul {
+	display: flex;
+	align-items: center;
+	gap: 5rem;
+}
+
+.navbar ul li a {
+	position: relative;
+	color: var(--quinary-color);
+	font-weight: 500;
+	font-size: 16px;
+	padding-bottom: 3px;
+	transition: all 0.3s;
+}
+
+.navbar ul li a:hover {
+	color: var(--primary-color);
+	/* display: flex; */
+	/* justify-content: center; */
+}
+
+.navbar ul li a::after {
+	position: absolute;
+	content: "";
+	height: 1px;
+	width: 1%;
+	bottom: 0;
+	left: 50%;
+	background: transparent;
+	transition: all 0.3s;
+}
+
+.navbar ul li a:hover::after {
+	background: var(--primary-color);
+	width: 100%;
+	left: 0;
+}
+
+/* navbar */
+
+/* theme */
+#theme {
+	display: none;
+	transition: all 0.3s;
+}
+
+.theme {
+	position: relative;
+	background: var(--secondary-color);
+	display: flex;
+	align-items: center;
+	border-radius: 24px;
+	width: 88px;
+	height: 40px;
+	padding: 10px;
+	box-shadow: inset 0 0 7px #000000;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.theme::after {
+	position: absolute;
+	content: "";
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: var(--tertiary-color);
+	border-radius: 24px;
+	transition: all 0.3s;
+}
+
+.theme i:nth-child(1) {
+	font-size: 20px;
+	color: goldenrod;
+	position: absolute;
+}
+
+.theme i:nth-child(2) {
+	color: var(--primary-color);
+	font-size: 20px;
+	margin-left: auto;
+}
+
+#theme:checked+.theme::after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+	background: var(--quinary-color);
+}
+
+/* theme */
+
+/* progress bar */
+#progress {
+	position: relative;
+	height: 4px;
+	width: 100%;
+	background: var(--tertiary-color);
+}
+
+#progress span {
+	position: absolute;
+	height: 100%;
+	width: 70%;
+	background: var(--primary-color);
+	transition: all 0.3s;
+}
+
+/* progress bar */
+/* header */
+
+/* main */
+/* home */
+#home {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	padding: 12rem 5rem;
+}
+
+/* home background */
+
+.home_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/dark-gray-background-with-abstract-geometric-shapes_88088-299.jpg");
+	object-fit: cover;
+	z-index: -1;
+}
+
+.home_bg::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: var(--secondary-color);
+	opacity: 0.8;
+}
+
+/* home background */
+
+/* content */
+
+@keyframes charging {
+	from {
+		transform: translateY(-3rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+}
+
+.home_content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.home_content>div:nth-child(1) h1 {
+	font-size: 24px;
+	color: var(--quinary-color);
+	font-weight: 600;
+	margin-bottom: 3rem;
+
+	/* animation */
+	transform: translateY(-3rem);
+	opacity: 0;
+	animation: charging 0.7s 0.3s 1 linear forwards;
+}
+
+.home_content>div:nth-child(1) h1 span {
+	color: var(--primary-color);
+	font-weight: 700;
+}
+
+.home_content>div:nth-child(1) div:nth-of-type(1) h2 {
+	font-size: 50px;
+	color: var(--quinary-color);
+	font-weight: 600;
+	margin-bottom: 1rem;
+	line-height: 1.2;
+
+	/* animation */
+	transform: translateY(-3rem);
+	opacity: 0;
+	animation: charging 0.7s 0.3s 1 linear forwards;
+}
+
+.home_content>div:nth-child(1) p {
+	font-size: 14px;
+	color: var(--quinary-color);
+	margin-bottom: 2rem;
+	display: block;
+	width: 100%;
+	max-width: 400px;
+
+	/* animation */
+	transform: translateY(-3rem);
+	opacity: 0;
+	animation: charging .7s .3s 1 linear forwards;
+}
+
+.home_content>div:nth-child(1) div:nth-of-type(2) {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	/* animation */
+	transform: translateY(-3rem);
+	opacity: 0;
+	animation: charging .7s .3s 1 linear forwards;
+}
+
+/* profile */
+.home_profile {
+	position: relative;
+	height: 530px;
+	width: 530px;
+	margin-right: 3rem;
+	margin-top: -2rem;
+
+	/* animation */
+	transform: translateY(-3rem);
+	opacity: 0;
+	animation: charging .8s .5s 1 linear forwards;
+}
+
+.home_profile div:nth-child(1) {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+	background-image: url("../images/unhappy-male-student-typing-keyboard-brunette-freelancer-glasses-using-laptop-work.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 100px #000000;
+	border: 8px solid var(--primary-color);
+}
+
+.home_profile div:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+	background: var(--secondary-color);
+	box-shadow: 0 0 15px var(--primary-color);
+	z-index: -1;
+}
+
+/* profile */
+
+/* content */
+/* home */
+/* main */
