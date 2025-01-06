@@ -1,11 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script src="./assets/js/index.js" defer></script>
+  <title>Portfolio</title>
 </head>
+
 <body>
-    
+  <header>
+    <!-- top -->
+    <div>
+      <!-- logo -->
+      <h1 class="logo">Larsson <span>A.</span></h1>
+      <!-- logo -->
+
+      <!-- navbar -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- navbar -->
+
+      <!-- theme -->
+      <div>
+        <input type="checkbox" id="theme">
+        <label for="theme" class="theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+      <!-- theme -->
+    </div>
+    <!-- top -->
+
+    <!-- progress bar -->
+    <div id="progress">
+      <span></span>
+    </div>
+    <!-- progress bar -->
+  </header>
+
+  <main>
+    <!-- home -->
+    <section class="home">
+      <div class="sect" id="home"></div>
+      <!-- background -->
+      <div class="home_bg">
+        <div></div>
+      </div>
+      <!-- background -->
+
+      <!-- content -->
+      <div class="home_content">
+        <!-- left -->
+        <div>
+          <h1>Hello,<br> I'm <span>Larsson Apong</span></h1>
+
+          <div>
+            <h2>Front End <span class="anim_home">Developer</span> +</h2>
+            <h2>UX & UI <span class="anim_home">Designer</span> +</h2>
+            <h2>Ethical <span class="anim_home">Hacker</span></h2>
+          </div>
+
+          <p>Explore, create and protect: these are my motivations.In a world consumed by technology, I constantly push
+            beyond my own limits.</p>
+
+          <!-- social -->
+          <div>
+            <a href="#contact" class="btn">Contact Me</a>
+            <span class="social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </span>
+          </div>
+          <!-- social -->
+        </div>
+        <!-- left -->
+
+        <!-- right -->
+        <div class="home_profile">
+          <div></div>
+          <div></div>
+        </div>
+        <!-- right -->
+      </div>
+      <!-- content -->
+    </section>
+    <!-- home -->
+
+    <!-- about me -->
+    <section class="about">
+      <div class="sect" id="about"></div>
+      <!-- about content -->
+      <div class="about_content">
+        <!-- left -->
+        <div class="about_profile">
+          <div></div>
+          <div></div>
+        </div>
+        <!-- left -->
+
+        <!-- right -->
+        <div>
+          <!-- title -->
+          <h2 class="titles">About <span>Me</span></h2>
+          <!-- title -->
+
+          <p>I am passionate about crafting innovative digital experiences and always eager to collaborate on creative
+            and technical projects. With expertise in UX design, front-end development, and cybersecurity, I am here to
+            help you turn your ideas into impactful results.
+          </p>
+
+          <div class="about_infos">
+            <div>
+              <span><strong>Name:</strong> Larsson Apong</span>
+              <span><strong>Age:</strong> 18</span>
+            </div>
+
+            <div>
+              <span><strong>From:</strong> Cameroun, Douala</span>
+              <span><strong>Email:</strong> larssonapong@proton.me</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="#contact" class="btn">Download CV</a>
+            <a href="#contact" class="btn2">Hire Me</a>
+          </div>
+        </div>
+        <!-- right -->
+      </div>
+      <!-- about content -->
+    </section>
+    <!-- about me -->
+
+    <!-- services -->
+    <section class="services">
+      <div class="sect" id="services"></div>
+      <!-- global -->
+      <div>
+        <!-- title -->
+        <div>
+          <h2 class="titles">My <span>Services</span></h2>
+        </div>
+        <!-- title -->
+
+        <!-- content card -->
+        <div>
+          <!-- card 1 -->
+          <div class="svc_card">
+            <!-- frontface -->
+            <div class="svc">
+              <img src="./assets/images/design/light-bulb-14-svgrepo-com 1.png" alt="UX / UI Designer">
+              <h2>UX / UI Designer</h2>
+              <p>
+                I design visually appealing. My approach focuses on simplicity, functionality, and aesthetics to create
+                interfaces that engage users while meeting their needs.
+              </p>
+            </div>
+
+            <!-- backface -->
+            <div class="svc_back">
+              <h2 class="titles">My <span>Skills</span></h2>
+              <div class="content1">
+                <div>
+                  <h3>Technologies</h3>
+                  <span>
+                    <i class="fa-brands fa-figma"></i>
+                    <a href="#">Figma</a>
+                  </span>
+
+                  <span>
+                    <img src="./assets/images/design/32px-Adobe_XD_CC_icon.svg.png" alt="adobe xd">
+                    <a href="#">Adobe XD</a>
+                  </span>
+                </div>
+
+                <div>
+                  <span>Simplicity</span>
+                  <span>Functionality</span>
+                  <span>Aesthetics</span>
+                </div>
+              </div>
+              <a href="#" class="btn2">Hire Me</a>
+            </div>
+          </div>
+          <!-- card 1 -->
+
+          <!-- card 2 -->
+          <div class="svc_card">
+            <!-- frontface -->
+            <div class="svc">
+              <img src="./assets/images/design/pc-svgrepo-com 1.png" alt="Developer">
+              <h2>Developer</h2>
+              <p>
+                As a developer. Whether it's a dynamic website or a complex application, I ensure that every project is
+                optimized to provide a smooth and seamless experience.
+              </p>
+            </div>
+
+            <!-- backface -->
+            <div class="svc_back">
+              <h2 class="titles">My <span>Skills</span></h2>
+              <h3>Technologies</h3>
+
+              <div class="content2">
+                <div>
+                  <span>
+                    <i class="fa-brands fa-html5"></i>
+                    <a href="#">HTML</a>
+                  </span>
+
+                  <span>
+                    <i class="fa-brands fa-css3"></i>
+                    <a href="#">TailwindCSS</a>
+                  </span>
+                </div>
+
+                <div>
+                  <span>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <a href="#">CSS</a>
+                  </span>
+
+                  <span>
+                    <i class="fa-brands fa-js"></i>
+                    <a href="#">Javascript</a>
+                  </span>
+                </div>
+              </div>
+              <a href="#" class="btn2">Hire Me</a>
+            </div>
+          </div>
+          <!-- card 2 -->
+
+          <!-- card 3 -->
+          <div class="svc_card">
+            <!-- frontface -->
+            <div class="svc">
+              <img src="./assets/images/design/anonymous-cyber-crime-criminal-hack-hacker-svgrepo-com 1.png"
+                alt="Ethical Hacker">
+              <h2>Ethical Hacker</h2>
+              <p>
+                I provide penetration testing to identify and resolve vulnerabilities, ensuring your systems are secure
+                and your data is protected.
+              </p>
+            </div>
+
+            <!-- backface -->
+            <div class="svc_back">
+              <h2 class="titles">My <span>Skills</span></h2>
+            </div>
+          </div>
+          <!-- card 3 -->
+        </div>
+        <!-- content card -->
+      </div>
+      <!-- global -->
+    </section>
+    <!-- services -->
+
+    <!-- Projects -->
+    <section class="projects">
+      <!-- title -->
+      <div>
+        <div class="sect" id="projects"></div>
+        <h2 class="titles">My <span>Projects</span></h2>
+      </div>
+      <!-- title -->
+
+      <!-- content card -->
+      <div class="content_projects">
+        <!-- card 1 -->
+        <div class="project">
+          <!-- top -->
+          <div></div>
+          <!-- top -->
+
+          <!-- bottom -->
+          <div>
+            <h2>Template: <span>Topics Design</span></h2>
+            <p>
+              This project involves the faithful reproduction of an existing web template. The primary goal was to
+              enhance my skills in web development, particularly, by carefully replicating the original design's visual
+              and functional aspects.
+            </p>
+            <p>Tech stack: <span>#html, #TailwindCSS, #Js</span></p>
+            <div>
+              <span>
+                <i class="fa-solid fa-link"></i>
+                <a href="#">Live Preview</a>
+              </span>
+
+              <span>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">View Code</a>
+              </span>
+            </div>
+          </div>
+          <!-- bottom -->
+        </div>
+        <!-- card 1 -->
+
+        <!-- card 2 -->
+        <div class="project">
+          <!-- top -->
+          <div></div>
+          <!-- top -->
+
+          <!-- bottom -->
+          <div>
+            <h2>Template: <span>Pixel Paradise</span></h2>
+            <p>
+              This project features a streaming application dedicated to manga enthusiasts. It provides an intuitive
+              interface for browsing, reading, and discovering manga, with features designed to enhance user engagement
+              and accessibility.
+            </p>
+            <p>Tech stack: <span>#Figma</span></p>
+            <div>
+              <span>
+                <i class="fa-solid fa-link"></i>
+                <a href="#">Live Preview</a>
+              </span>
+            </div>
+          </div>
+          <!-- bottom -->
+        </div>
+        <!-- card 2 -->
+
+        <!-- card 3 -->
+        <div class="project">
+          <!-- top -->
+          <div></div>
+          <!-- top -->
+
+          <!-- bottom -->
+          <div>
+            <h2>Template: <span>Hacking Tool</span></h2>
+            <p>
+              This project showcases a custom-built hacking tool designed for ethical security testing. It includes
+              functionalities to analyze, identify, and exploit vulnerabilities, providing valuable insights to
+              strengthen system defenses.
+            </p>
+            <p>Tech stack: <span>#Python</span></p>
+            <div>
+              <span>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">View Code</a>
+              </span>
+            </div>
+          </div>
+          <!-- bottom -->
+        </div>
+        <!-- card 3 -->
+
+        <!-- card 4 -->
+        <div class="project">
+          <!-- top -->
+          <div></div>
+          <!-- top -->
+
+          <!-- bottom -->
+          <div>
+            <h2>Template: <span>John Doe</span></h2>
+            <p>
+              his project showcases my ability to recreate a professional portfolio website with attention to detail. I
+              focused on replicating the design and functionality while ensuring a smooth and responsive user
+              experience.
+            </p>
+            <p>Tech stack: <span>#html, #TailwindCSS</span></p>
+            <div>
+              <span>
+                <i class="fa-solid fa-link"></i>
+                <a href="#">Live Preview</a>
+              </span>
+
+              <span>
+                <i class="fa-brands fa-github"></i>
+                <a href="#">View Code</a>
+              </span>
+            </div>
+          </div>
+          <!-- bottom -->
+        </div>
+        <!-- card 4 -->
+      </div>
+      <!-- content card -->
+
+      <!-- show more -->
+      <div class="show_more">
+        <a href="#">> Show More</a>
+      </div>
+      <!-- show more -->
+    </section>
+    <!-- Projects -->
+
+    <!-- contact -->
+    <section class="contact">
+      <div class="sect" id="contact"></div>
+      <!-- background -->
+      <div class="contact_bg"></div>
+      <!-- background -->
+
+      <!-- content -->
+      <div class="content_contact">
+        <!-- formulaire -->
+        <form class="form" action="https://formspree.io/f/manwzaqg" method="post">
+          <div>
+            <input type="text" name="Name" required>
+            <span>Your Name</span>
+            <p>Name must contain at least 3 letters.</p>
+          </div>
+
+          <div>
+            <input type="text" name="Email" required>
+            <span>Your Email</span>
+            <p>Please enter a valid email</p>
+          </div>
+
+          <div>
+            <textarea name="Message" id="message" required></textarea>
+            <span>Your Message</span>
+            <p>Please enter a valid value</p>
+          </div>
+
+          <div>
+            <button type="submit" class="btn2">Send Message</button>
+          </div>
+        </form>
+        <!-- formulaire -->
+
+        <!-- contact info -->
+        <div class="contact_info">
+          <h2 class="titles">Contact <span>Me</span></h2>
+          <p>For any inquiries or collaboration opportunities, feel free to reach out via email or the form below. I’ll
+            get back to you as soon as possible.</p>
+
+          <div>
+            <!-- location -->
+            <div class="contact_location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>
+                <p>Location</p>
+                <p>Japoma, Stadium</p>
+              </span>
+            </div>
+            <!-- location -->
+
+            <!-- phone -->
+            <div class="contact_phone">
+              <i class="fa-solid fa-phone"></i>
+              <span>
+                <p>Phone / Whatsapp</p>
+                <p>237676998253</p>
+              </span>
+            </div>
+            <!-- phone -->
+          </div>
+
+          <!-- social media -->
+          <div class="contact_social">
+            <h3>Social Media</h3>
+            <span class="social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </span>
+          </div>
+          <!-- social media -->
+        </div>
+        <!-- contact info -->
+      </div>
+      <!-- content -->
+    </section>
+    <!-- contact -->
+  </main>
+
+  <footer>
+
+    <!-- onglets -->
+    <ul class="foot_onglets">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- onglets -->
+
+    <!-- social foot -->
+    <ul class="foot_social">
+      <li><a href="#">Linkedin</a></li>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">Behance</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+    <!-- social foot -->
+
+    <!-- copyright -->
+    <div class="foot_end">
+      <p>Copyright &copy; 2025 - Designed by <a href="#">Larsson Apong</a>. All rights reserved.</p>
+      <p>Thank you for visiting my portfolio !</p>
+    </div>
+    <!-- copyright -->
+  </footer>
 </body>
+
 </html>
