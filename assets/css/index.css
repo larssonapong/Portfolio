@@ -6,11 +6,25 @@
 	--secondary-color: #111110;
 	--tertiary-color: #19191b;
 	--quaternary-color: #1e1e1e;
-	--quinary-color: #f5f5f5;
+	--text-color: #f5f5f5;
+	--senary-color: #121315;
+	--hovering-color: #389883;
+	--filter-color: #000000;
 
 	/* Fonts */
 	--primary-font: "Poppins", sans-serif;
 	--secondary-font: "Roboto", sans-serif;
+}
+
+.light_mode {
+    --primary-color: #389883;
+    --secondary-color: #ffffff;
+    --tertiary-color: #f0f0f0;
+    --quaternary-color: #e0e0e0;
+    --text-color: #121315;
+    --senary-color: #f5f5f5;
+    --hovering-color: #5fd1bb;     
+    --filter-color: #ffffff; 
 }
 
 * {
@@ -42,13 +56,13 @@ html {
 
 .btn:hover {
 	background-color: var(--primary-color);
-	color: var(--quinary-color);
+	color: var(--text-color);
 }
 
 .btn2{
 	padding: 8px 24px;
 	background-color: var(--primary-color);
-    color: var(--quinary-color);
+    color: var(--text-color);
 	font-weight: 500;
 	font-size: 14px;
 	border-radius: 24px;
@@ -58,8 +72,8 @@ html {
 }
 
 .btn2:hover {
-    background: #389883;
-	border: 2px solid #389883;
+    background: var(--hovering-color);
+	border: 2px solid var(--hovering-color);
 }
 
 @keyframes socialwave {
@@ -120,13 +134,13 @@ html {
 }
 
 .social a:hover {
-	color: var(--quinary-color);
+	color: var(--text-color);
 	background: var(--primary-color);
 }
 
 .titles{
 	font-size: 40px;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 600;
 	text-align: center;
 	margin-bottom: 5rem;
@@ -138,9 +152,21 @@ html {
 	padding-bottom: 2px;
 }
 
-#about .titles:first-of-type{
+.about .titles:first-of-type{
 	margin-bottom: 2rem;
 	text-align: start;
+}
+
+#home, #about, #services, #projects, #contact{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0;
+}
+
+#projects{
+	margin-top: -100px;
 }
 
 /* assets */
@@ -171,7 +197,7 @@ header>div:first-of-type {
 }
 
 .logo span {
-	color: var(--quinary-color);
+	color: var(--text-color);
 }
 
 /* logo */
@@ -185,7 +211,7 @@ header>div:first-of-type {
 
 .navbar ul li a {
 	position: relative;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 500;
 	font-size: 16px;
 	padding-bottom: 3px;
@@ -194,8 +220,6 @@ header>div:first-of-type {
 
 .navbar ul li a:hover {
 	color: var(--primary-color);
-	/* display: flex; */
-	/* justify-content: center; */
 }
 
 .navbar ul li a::after {
@@ -210,6 +234,17 @@ header>div:first-of-type {
 }
 
 .navbar ul li a:hover::after {
+	background: var(--primary-color);
+	width: 100%;
+	left: 0;
+}
+
+.navbar ul li a.active{
+	color: var(--primary-color);
+	transition: all .3s;
+}
+
+.navbar ul li a.active::after {
 	background: var(--primary-color);
 	width: 100%;
 	left: 0;
@@ -232,7 +267,7 @@ header>div:first-of-type {
 	width: 88px;
 	height: 40px;
 	padding: 10px;
-	box-shadow: inset 0 0 7px #000000;
+	box-shadow: inset 0 0 7px var(--filter-color);
 	cursor: pointer;
 	transition: all 0.5s;
 }
@@ -263,7 +298,7 @@ header>div:first-of-type {
 #theme:checked+.theme::after {
 	left: calc(100% - 5px);
 	transform: translateX(-100%);
-	background: var(--quinary-color);
+	background: var(--text-color);
 }
 
 /* theme */
@@ -279,9 +314,9 @@ header>div:first-of-type {
 #progress span {
 	position: absolute;
 	height: 100%;
-	width: 70%;
+	width: 0%;
 	background: var(--primary-color);
-	transition: all 0.3s;
+	transition: width .1s;
 }
 
 /* progress bar */
@@ -289,11 +324,10 @@ header>div:first-of-type {
 
 /* main */
 /* home */
-#home {
+.home {
 	position: relative;
-	height: 100vh;
 	width: 100%;
-	padding: 12rem 5rem;
+	padding: 12rem 5rem 100px;
 }
 
 /* home background */
@@ -341,7 +375,7 @@ header>div:first-of-type {
 
 .home_content>div:nth-child(1) h1 {
 	font-size: 24px;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 600;
 	margin-bottom: 3rem;
 
@@ -358,7 +392,7 @@ header>div:first-of-type {
 
 .home_content>div:nth-child(1) div:nth-of-type(1) h2 {
 	font-size: 50px;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 600;
 	margin-bottom: 1rem;
 	line-height: 1.2;
@@ -371,7 +405,7 @@ header>div:first-of-type {
 
 .home_content>div:nth-child(1) p {
 	font-size: 14px;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	margin-bottom: 2rem;
 	display: block;
 	width: 100%;
@@ -419,7 +453,7 @@ header>div:first-of-type {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	box-shadow: inset 0 0 100px #000000;
+	box-shadow: inset 0 0 100px var(--filter-color);
 	border: 8px solid var(--primary-color);
 }
 
@@ -441,11 +475,11 @@ header>div:first-of-type {
 /* home */
 
 /* about me */
-#about{
+.about{
 	position: relative;
 	width: 100%;
 	height: auto;
-	background: var(--tertiary-color);
+	background: var(--senary-color);
 	padding: 100px 5rem 32rem 100px;
 }
 
@@ -472,7 +506,7 @@ header>div:first-of-type {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	box-shadow: inset 0 0 100px #000000;
+	box-shadow: inset 0 0 100px var(--filter-color);
 	border: 8px solid var(--primary-color);
 }
 
@@ -495,7 +529,7 @@ header>div:first-of-type {
 
 .about_content div:nth-child(2) p{
 	font-size: 16px;
-    color: var(--quinary-color);
+    color: var(--text-color);
     margin-bottom: 2rem;
 	padding-bottom: 2rem;
 	display: block;
@@ -514,7 +548,7 @@ header>div:first-of-type {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	width: 100%;
 	max-width: 640px;
 }
@@ -537,7 +571,7 @@ header>div:first-of-type {
 /* about me */
 
 /* services */
-#services{
+.services{
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -546,14 +580,14 @@ header>div:first-of-type {
 	z-index: 1;
 }
 
-#services > div{
+.services > div{
 	position: absolute;
 	margin-top: -25rem;
 	width: 100%;
 	padding: 100px 5rem;
 }
 
-#services > div div:nth-child(2){
+.services > div div:nth-child(2){
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
@@ -597,7 +631,7 @@ header>div:first-of-type {
 }
 
 .svc_back h3{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 600;
 	text-align: center;
 }
@@ -637,7 +671,7 @@ header>div:first-of-type {
 }
 
 .svc_back .content1 > div:nth-child(2){
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 500;
 	display: inline-flex;
 	flex-direction: column;
@@ -686,14 +720,14 @@ header>div:first-of-type {
 }
 
 .svc h2{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 600;
 	font-size: 24px;
 	margin-bottom: 2rem;
 }
 
 .svc p{ 
-    color: var(--quinary-color);
+    color: var(--text-color);
 	font-size: 14px;
 }
 
@@ -704,9 +738,14 @@ div > div > div:nth-child(2) .svc img {
 /* services */
 
 /* projects */
-#projects{
+.projects{
+	position: relative;
 	background: var(--secondary-color);
 	padding: 25rem 5rem 100px 5rem;
+}
+
+.projects > div:nth-of-type(1){
+	position: relative;
 }
 
 .content_projects{
@@ -752,7 +791,7 @@ div > div > div:nth-child(2) .svc img {
 }
 
 .project div:nth-child(2) h2{
-	color: var(--quinary-color);
+	color: var(--text-color);
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 1rem;
@@ -763,13 +802,13 @@ div > div > div:nth-child(2) .svc img {
 }
 
 .project div:nth-child(2) p:nth-of-type(1){
-	color: var(--quinary-color);
+	color: var(--text-color);
     font-size: 16px;
     margin-bottom: 1rem;
 }
 
 .project div:nth-child(2) p:nth-of-type(2){
-	color: var(--quinary-color);
+	color: var(--text-color);
     font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 1rem;
@@ -787,7 +826,7 @@ div > div > div:nth-child(2) .svc img {
 
 .project div:nth-child(2) div a,
 .project div:nth-child(2) div i{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	transition: all .3s;
 }
 
@@ -803,10 +842,31 @@ div > div > div:nth-child(2) .svc img {
 .project div:nth-child(2) div span:hover a{
 	color: var(--primary-color);
 }
+
+/* show more */
+
+.show_more{
+	display: flex;
+	padding: 3rem 0 0;
+}
+
+.show_more a{
+	display: inline-block;
+	margin-left: auto;
+	color: var(--primary-color);
+	font-size: 14px;
+	transition: all .3s;
+	font-weight: 500;
+}
+
+.show_more a:hover{
+    text-decoration: underline;
+}
+/* show more */
 /* projects */
 
 /* contact me */
-#contact{
+.contact{
 	position: relative;
 	background-image: url('../images/neon-mask-man-in-black-dark-background-hoodie-blue-light-5k-2880x1800-2162.jpg');
 	background-repeat: no-repeat;
@@ -821,7 +881,7 @@ div > div > div:nth-child(2) .svc img {
 	left: 0;
 	top: 0;
 	z-index: 0;
-	background: #000000;
+	background: var(--filter-color);
 	opacity: .7;
 }
 
@@ -842,13 +902,23 @@ div > div > div:nth-child(2) .svc img {
 	padding: 2rem 1.5rem;
 }
 
+.content_contact form div:nth-of-type(1) p,
+.content_contact form div:nth-of-type(2) p{
+	position: absolute;
+	font-size: 10px;
+	color: red;
+	margin-top: 0.3rem;
+	font-style: italic;
+	display: none;
+}
+
 .content_contact form div:nth-of-type(1),
 .content_contact form div:nth-of-type(2){
 	position: relative;
 	width: 100%;
 	border-radius: 6px;
 	border: 2px solid var(--primary-color);
-	background: #000000;
+	background: var(--filter-color);
 	margin-bottom: 2rem;
 }
 
@@ -866,11 +936,10 @@ div > div > div:nth-child(2) .svc img {
 .content_contact form div:nth-of-type(1) span,
 .content_contact form div:nth-of-type(2) span{
 	position: absolute;
-	/* padding: 1rem 1.5rem; */
 	top: 1rem;
 	left: 1.5rem;
 	color: var(--primary-color);
-	background: #000000;
+	background: var(--filter-color);
 	font-weight: 500;
 	font-size: 16px;
 	pointer-events: none;
@@ -884,7 +953,7 @@ div > div > div:nth-child(2) .svc img {
 	transform: translateY(-140%) translateX(-15%);
 	font-size: 12px;
 	padding: 0 6px;
-	background: #000000;
+	background: var(--filter-color);
 }
 
 .content_contact form div:nth-of-type(3) textarea{
@@ -894,7 +963,7 @@ div > div > div:nth-child(2) .svc img {
 	padding: 1rem 1.5rem;
 	border-radius: 6px;
 	border: 2px solid var(--primary-color);
-	background: #000000;
+	background: var(--filter-color);
 	color: var(--primary-color);
 	font-size: 16px;
 	font-weight: 500;
@@ -910,11 +979,21 @@ div > div > div:nth-child(2) .svc img {
 	top: 1rem;
 	left: 1.5rem;
 	color: var(--primary-color);
-	background: #000000;
+	background: var(--filter-color);
 	font-weight: 500;
 	font-size: 16px;
 	pointer-events: none;
 	transition: all .5s;
+}
+
+.content_contact form div:nth-of-type(3) p{
+	position: absolute;
+	color: red;
+	font-size: 10px;
+	font-style: italic;
+	bottom: 0.7rem;
+	left: 0;
+	display: none;
 }
 
 .content_contact form div:nth-of-type(3) textarea:focus ~ span,
@@ -922,7 +1001,7 @@ div > div > div:nth-child(2) .svc img {
 	transform: translateY(-140%) translateX(-10%);
 	font-size: 12px;
 	padding: 0 6px;
-	background: #000000;
+	background: var(--filter-color);
 }
 
 .content_contact form div:nth-of-type(4) .btn2{
@@ -942,7 +1021,7 @@ div > div > div:nth-child(2) .svc img {
 
 .contact_info > p{
 	font-size: 16px;
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: normal;
 	font-family: var(--secondary-font);
 	width: 100%;
@@ -980,13 +1059,13 @@ div > div > div:nth-child(2) .svc img {
 
 .contact_location span p:nth-child(1),
 .contact_phone span p:nth-child(1){
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 500;
 	font-size: 16px;
 }
 
 .contact_social h3{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-weight: 500;
 	font-size: 16px;
 	margin-bottom: 1rem;
@@ -1015,7 +1094,7 @@ footer{
 }
 
 .foot_onglets li a{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-size: 16px;
 	font-weight: 500;
 	transition: all .3s;
@@ -1032,7 +1111,7 @@ footer{
 }
 
 .foot_social li a{
-	color: var(--quinary-color);
+	color: var(--text-color);
 	font-size: 14px;
 	font-weight: normal;
 	padding: 0 8px;
@@ -1045,13 +1124,13 @@ footer{
 }
 
 .foot_end{
-	color: var(--quinary-color);
+	color: var(--text-color);
     font-size: 14px;
     font-weight: normal;
 }
 
 .foot_end p:nth-of-type(1){
-    color: var(--quinary-color);
+    color: var(--text-color);
     transition: all .3s;
 	margin-bottom: 1rem;
 }
