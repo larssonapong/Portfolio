@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const theme = document.getElementById("theme")
+    // Réinitialiser le localStorage au début
+    // localStorage.clear();
+    // localStorage.removeItem('theme');
+    // console.log("Le localStorage a été réinitialisé au chargement de la page.");
+
+    // Récupérer les éléments du DOM
+    const theme = document.getElementById("theme");
     const ancres = document.querySelectorAll(".sect");
     const header = document.querySelector("header");
     const navbar = document.querySelector(".navbar");
@@ -14,25 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gestion du mode
     let mode = localStorage.getItem('theme');
 
-    if (mode === 'on') {
-        document.body.classList.remove('light_mode');
-        theme.checked = false;
-    } else {
+    if (mode === 'dark') {
         document.body.classList.add('light_mode');
         theme.checked = true;
+        console.log(mode);
+        
+    } else {
+        document.body.classList.remove('light_mode');
+        theme.checked = false;
+        console.log(mode);
     }
 
     theme.addEventListener('change', () => {
         if (theme.checked) {
             document.body.classList.add('light_mode');
-            localStorage.setItem('theme', 'off');
+            localStorage.setItem('theme', 'light');
         } else {
             document.body.classList.remove('light_mode');
-            localStorage.setItem('theme', 'on');
+            localStorage.setItem('theme', 'dark');
         }
-    })
-
-    // Gestion du mode
+    });
 
     // Gestion de la bar de progression
     window.addEventListener('scroll', () => {
@@ -40,16 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let winheight = document.documentElement.scrollHeight - window.innerHeight;
         let pourcentage = (scrolled / winheight) * 100;
         progressbar.style.width = `${pourcentage}%`;
-    })
-    // Gestion de la bar de progression
+    });
 
     // Gestion des ancres
-    headh = header.offsetHeight;
-    ancres.forEach((ancre, i) => {
+    const headh = header.offsetHeight;
+    ancres.forEach((ancre) => {
         ancre.style.top = `-${headh}px`;
     });
-    // Gestion des ancres
-
 
     // Gestion de la couleur des onglets
     onglets[0].classList.add("active");
@@ -63,9 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 onglets[i].classList.add("active");
             }
-        })
-    })
-    // Gestion de la couleur des onglets
+        });
+    });
 
     // Variables pour suivre l'état de validation
     let isname = false;
@@ -89,8 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (value === "") {
             isname = false;
             error.style.display = 'none';
-        }
-        else {
+        } else {
             error.textContent = "Please enter a valid name.";
             error.style.display = 'block';
             isname = false;
@@ -148,16 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Désactiver le bouton de soumission par défaut
     submit.disabled = true;
-    form.reset();
-
-    // verification de tous les champs
-    submit.addEventListener('submit', () => {
-        setTimeout(() => {
-            form.reset(); // Réinitialiser le formulaire après un délai
-        }, 1000);
-        name[0].value = "";
-    })
-})
-
-//
-// 
+});
