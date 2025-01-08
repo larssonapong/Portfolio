@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector("header");
     const navbar = document.querySelector(".navbar");
     const onglets = navbar.querySelectorAll("a");
+    const burger = document.getElementById("burger");
     const progressbar = document.getElementById("progress").firstElementChild;
     const name = document.getElementsByName('Name');
     const email = document.getElementsByName('Email');
@@ -20,24 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gestion du mode
     let mode = localStorage.getItem('theme');
 
-    if (mode === 'dark') {
+    if (mode === 'light') {
         document.body.classList.add('light_mode');
         theme.checked = true;
-        console.log(mode);
-        
     } else {
         document.body.classList.remove('light_mode');
         theme.checked = false;
-        console.log(mode);
     }
 
     theme.addEventListener('change', () => {
         if (theme.checked) {
             document.body.classList.add('light_mode');
             localStorage.setItem('theme', 'light');
+            mode = localStorage.getItem('theme');
         } else {
             document.body.classList.remove('light_mode');
             localStorage.setItem('theme', 'dark');
+            mode = localStorage.getItem('theme');
         }
     });
 
@@ -150,4 +150,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Désactiver le bouton de soumission par défaut
     submit.disabled = true;
+
+    // Gestion du responsive
+    navbar.style.top = `${headh}px`;
+
+    // bouton & menu burger
+    let isburger = false;
+    burger.addEventListener('click', () => {
+        let span1 = burger.firstElementChild;
+        let span2 = burger.children[1];
+        let span3 = burger.lastElementChild;
+        let navul = navbar.firstElementChild;
+        let jiophone = navbar.classList.contains('jiophone');
+
+        if (!isburger) {
+            // animation bouton burger
+            span1.style.transform = "rotateZ(45deg) translateY(9px) translateX(2px)";
+            span1.style.width = "100%";
+            span3.style.transform = "rotateZ(-45deg) translateY(-9px) translateX(2px)";
+            span3.style.width = "100%";
+            span2.style.opacity = "0";
+
+            // animation du menu
+            navbar.classList.add('active');
+            navul.style.opacity = "1";
+
+            navbar.classList.add('jiophone');
+            isburger = true;
+        } else {
+            span1.style.transform = "rotateZ(0deg) translateY(0px) translateX(0px)";
+            span1.style.width = "80%";
+            span3.style.transform = "rotateZ(0deg) translateY(0px) translateX(0px)";
+            span3.style.width = "80%";
+            span2.style.opacity = "1";
+
+            navbar.classList.remove('active');
+            navul.style.opacity = "0";
+
+            navbar.classList.remove('jiophone');
+            isburger = false;
+        }
+    });
+
 });

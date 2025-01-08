@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
   <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <script src="./assets/js/index.js" defer></script>
   <title>Portfolio</title>
 </head>
@@ -39,6 +40,14 @@
         </label>
       </div>
       <!-- theme -->
+
+      <!-- burger -->
+      <div id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- burger -->
     </div>
     <!-- top -->
 
@@ -148,8 +157,8 @@
     <!-- services -->
     <section class="services">
       <div class="sect" id="services"></div>
-      <!-- global -->
-      <div>
+      <!-- container -->
+      <div class="services_content">
         <!-- title -->
         <div>
           <h2 class="titles">My <span>Services</span></h2>
@@ -157,11 +166,11 @@
         <!-- title -->
 
         <!-- content card -->
-        <div>
+        <div class="content_card">
           <!-- card 1 -->
           <div class="svc_card">
             <!-- frontface -->
-            <div class="svc">
+            <div class="svc_front">
               <img src="./assets/images/design/light-bulb-14-svgrepo-com 1.png" alt="UX / UI Designer">
               <h2>UX / UI Designer</h2>
               <p>
@@ -201,7 +210,7 @@
           <!-- card 2 -->
           <div class="svc_card">
             <!-- frontface -->
-            <div class="svc">
+            <div class="svc_front">
               <img src="./assets/images/design/pc-svgrepo-com 1.png" alt="Developer">
               <h2>Developer</h2>
               <p>
@@ -248,7 +257,7 @@
           <!-- card 3 -->
           <div class="svc_card">
             <!-- frontface -->
-            <div class="svc">
+            <div class="svc_front">
               <img src="./assets/images/design/anonymous-cyber-crime-criminal-hack-hacker-svgrepo-com 1.png"
                 alt="Ethical Hacker">
               <h2>Ethical Hacker</h2>
@@ -267,142 +276,147 @@
         </div>
         <!-- content card -->
       </div>
-      <!-- global -->
+      <!-- container -->
     </section>
     <!-- services -->
 
     <!-- Projects -->
     <section class="projects">
-      <!-- title -->
-      <div>
-        <div class="sect" id="projects"></div>
-        <h2 class="titles">My <span>Projects</span></h2>
+      <div class="projects_contain">
+        <!-- title -->
+        <div>
+          <div class="sect" id="projects"></div>
+          <h2 class="titles">My <span>Projects</span></h2>
+        </div>
+        <!-- title -->
+
+        <!-- content card -->
+        <div class="cards_contain">
+          <!-- card 1 -->
+          <div class="project">
+            <!-- top -->
+            <div></div>
+            <!-- top -->
+
+            <!-- bottom -->
+            <div>
+              <h2>Template: <span>Topics Design</span></h2>
+              <p>
+                This project involves the faithful reproduction of an existing web template. The primary goal was to
+                enhance my skills in web development, particularly, by carefully replicating the original design's
+                visual
+                and functional aspects.
+              </p>
+              <p>Tech stack: <span>#html, #TailwindCSS, #Js</span></p>
+              <div>
+                <span>
+                  <i class="fa-solid fa-link"></i>
+                  <a href="#">Live Preview</a>
+                </span>
+
+                <span>
+                  <i class="fa-brands fa-github"></i>
+                  <a href="#">View Code</a>
+                </span>
+              </div>
+            </div>
+            <!-- bottom -->
+          </div>
+          <!-- card 1 -->
+
+          <!-- card 2 -->
+          <div class="project">
+            <!-- top -->
+            <div></div>
+            <!-- top -->
+
+            <!-- bottom -->
+            <div>
+              <h2>Template: <span>Pixel Paradise</span></h2>
+              <p>
+                This project features a streaming application dedicated to manga enthusiasts. It provides an intuitive
+                interface for browsing, reading, and discovering manga, with features designed to enhance user
+                engagement
+                and accessibility.
+              </p>
+              <p>Tech stack: <span>#Figma</span></p>
+              <div>
+                <span>
+                  <i class="fa-solid fa-link"></i>
+                  <a href="#">Live Preview</a>
+                </span>
+              </div>
+            </div>
+            <!-- bottom -->
+          </div>
+          <!-- card 2 -->
+
+          <!-- card 3 -->
+          <div class="project">
+            <!-- top -->
+            <div></div>
+            <!-- top -->
+
+            <!-- bottom -->
+            <div>
+              <h2>Template: <span>Hacking Tool</span></h2>
+              <p>
+                This project showcases a custom-built hacking tool designed for ethical security testing. It includes
+                functionalities to analyze, identify, and exploit vulnerabilities, providing valuable insights to
+                strengthen system defenses.
+              </p>
+              <p>Tech stack: <span>#Python</span></p>
+              <div>
+                <span>
+                  <i class="fa-brands fa-github"></i>
+                  <a href="#">View Code</a>
+                </span>
+              </div>
+            </div>
+            <!-- bottom -->
+          </div>
+          <!-- card 3 -->
+
+          <!-- card 4 -->
+          <div class="project">
+            <!-- top -->
+            <div></div>
+            <!-- top -->
+
+            <!-- bottom -->
+            <div>
+              <h2>Template: <span>John Doe</span></h2>
+              <p>
+                his project showcases my ability to recreate a professional portfolio website with attention to detail.
+                I
+                focused on replicating the design and functionality while ensuring a smooth and responsive user
+                experience.
+              </p>
+              <p>Tech stack: <span>#html, #TailwindCSS</span></p>
+              <div>
+                <span>
+                  <i class="fa-solid fa-link"></i>
+                  <a href="#">Live Preview</a>
+                </span>
+
+                <span>
+                  <i class="fa-brands fa-github"></i>
+                  <a href="#">View Code</a>
+                </span>
+              </div>
+            </div>
+            <!-- bottom -->
+          </div>
+          <!-- card 4 -->
+        </div>
+        <!-- content card -->
+
+        <!-- show more -->
+        <div class="show_more">
+          <a href="#">> Show More</a>
+        </div>
+        <!-- show more -->
       </div>
-      <!-- title -->
-
-      <!-- content card -->
-      <div class="content_projects">
-        <!-- card 1 -->
-        <div class="project">
-          <!-- top -->
-          <div></div>
-          <!-- top -->
-
-          <!-- bottom -->
-          <div>
-            <h2>Template: <span>Topics Design</span></h2>
-            <p>
-              This project involves the faithful reproduction of an existing web template. The primary goal was to
-              enhance my skills in web development, particularly, by carefully replicating the original design's visual
-              and functional aspects.
-            </p>
-            <p>Tech stack: <span>#html, #TailwindCSS, #Js</span></p>
-            <div>
-              <span>
-                <i class="fa-solid fa-link"></i>
-                <a href="#">Live Preview</a>
-              </span>
-
-              <span>
-                <i class="fa-brands fa-github"></i>
-                <a href="#">View Code</a>
-              </span>
-            </div>
-          </div>
-          <!-- bottom -->
-        </div>
-        <!-- card 1 -->
-
-        <!-- card 2 -->
-        <div class="project">
-          <!-- top -->
-          <div></div>
-          <!-- top -->
-
-          <!-- bottom -->
-          <div>
-            <h2>Template: <span>Pixel Paradise</span></h2>
-            <p>
-              This project features a streaming application dedicated to manga enthusiasts. It provides an intuitive
-              interface for browsing, reading, and discovering manga, with features designed to enhance user engagement
-              and accessibility.
-            </p>
-            <p>Tech stack: <span>#Figma</span></p>
-            <div>
-              <span>
-                <i class="fa-solid fa-link"></i>
-                <a href="#">Live Preview</a>
-              </span>
-            </div>
-          </div>
-          <!-- bottom -->
-        </div>
-        <!-- card 2 -->
-
-        <!-- card 3 -->
-        <div class="project">
-          <!-- top -->
-          <div></div>
-          <!-- top -->
-
-          <!-- bottom -->
-          <div>
-            <h2>Template: <span>Hacking Tool</span></h2>
-            <p>
-              This project showcases a custom-built hacking tool designed for ethical security testing. It includes
-              functionalities to analyze, identify, and exploit vulnerabilities, providing valuable insights to
-              strengthen system defenses.
-            </p>
-            <p>Tech stack: <span>#Python</span></p>
-            <div>
-              <span>
-                <i class="fa-brands fa-github"></i>
-                <a href="#">View Code</a>
-              </span>
-            </div>
-          </div>
-          <!-- bottom -->
-        </div>
-        <!-- card 3 -->
-
-        <!-- card 4 -->
-        <div class="project">
-          <!-- top -->
-          <div></div>
-          <!-- top -->
-
-          <!-- bottom -->
-          <div>
-            <h2>Template: <span>John Doe</span></h2>
-            <p>
-              his project showcases my ability to recreate a professional portfolio website with attention to detail. I
-              focused on replicating the design and functionality while ensuring a smooth and responsive user
-              experience.
-            </p>
-            <p>Tech stack: <span>#html, #TailwindCSS</span></p>
-            <div>
-              <span>
-                <i class="fa-solid fa-link"></i>
-                <a href="#">Live Preview</a>
-              </span>
-
-              <span>
-                <i class="fa-brands fa-github"></i>
-                <a href="#">View Code</a>
-              </span>
-            </div>
-          </div>
-          <!-- bottom -->
-        </div>
-        <!-- card 4 -->
-      </div>
-      <!-- content card -->
-
-      <!-- show more -->
-      <div class="show_more">
-        <a href="#">> Show More</a>
-      </div>
-      <!-- show more -->
     </section>
     <!-- Projects -->
 

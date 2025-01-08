@@ -165,10 +165,6 @@ html {
 	padding: 0;
 }
 
-#projects{
-	margin-top: -100px;
-}
-
 /* assets */
 
 /* header */
@@ -182,11 +178,14 @@ header {
 	transition: 0.3s;
 }
 
-header>div:first-of-type {
+header > div:first-of-type {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem 5rem;
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
 }
 
 /* logo */
@@ -203,6 +202,10 @@ header>div:first-of-type {
 /* logo */
 
 /* navbar */
+.navbar{
+	display: block;
+}
+
 .navbar ul {
 	display: flex;
 	align-items: center;
@@ -303,12 +306,34 @@ header>div:first-of-type {
 
 /* theme */
 
+/* burger */
+#burger{
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 24px;
+	width: 30px;
+}
+
+#burger span {
+	height: 2px;
+	width: 100%;
+	background: var(--primary-color);
+	transition: all .3s;
+}
+
+#burger span:nth-of-type(1),
+#burger span:nth-of-type(3){
+	width: 80%;
+}
+/* burger */
+
 /* progress bar */
 #progress {
 	position: relative;
 	height: 4px;
 	width: 100%;
-	background: var(--tertiary-color);
+	background: transparent;
 }
 
 #progress span {
@@ -327,7 +352,6 @@ header>div:first-of-type {
 .home {
 	position: relative;
 	width: 100%;
-	padding: 12rem 5rem 100px;
 }
 
 /* home background */
@@ -371,6 +395,10 @@ header>div:first-of-type {
 .home_content {
 	display: flex;
 	justify-content: space-between;
+	padding: 12rem 5rem 100px;
+	width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .home_content>div:nth-child(1) h1 {
@@ -480,13 +508,16 @@ header>div:first-of-type {
 	width: 100%;
 	height: auto;
 	background: var(--senary-color);
-	padding: 100px 5rem 32rem 100px;
 }
 
 .about_content{
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	padding: 100px 5rem 32rem 100px;
+	width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 /* profile */
 .about_profile {
@@ -575,22 +606,30 @@ header>div:first-of-type {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	/* padding: 100px 5rem; */
-	background: blue;
+	width: 100%;
 	z-index: 1;
 }
 
-.services > div{
+#services{
 	position: absolute;
 	margin-top: -25rem;
 	width: 100%;
-	padding: 100px 5rem;
+	height: 1px;
 }
 
-.services > div div:nth-child(2){
+.services_content{
+	position: absolute;
+	top: -25rem;
+	display: block;
+	padding: 100px 5rem;
+	margin: 0 auto;
+	width: 100%;
+    max-width: 1600px;
+}
+
+.content_card{
 	display: flex;
 	justify-content: space-between;
-	margin: auto;
 	perspective: 1000px;
 }
 
@@ -702,7 +741,7 @@ header>div:first-of-type {
 }
 /* skills */
 
-.svc{
+.svc_front{
 	position: relative;
 	background: var(--quaternary-color);
 	height: 100%;
@@ -715,23 +754,23 @@ header>div:first-of-type {
 	backface-visibility: hidden;
 }
 
-.svc img{
+.svc_front img{
     margin-bottom: 2rem;
 }
 
-.svc h2{
+.svc_front h2{
 	color: var(--text-color);
 	font-weight: 600;
 	font-size: 24px;
 	margin-bottom: 2rem;
 }
 
-.svc p{ 
+.svc_front p{ 
     color: var(--text-color);
 	font-size: 14px;
 }
 
-div > div > div:nth-child(2) .svc img {
+div > div > div:nth-child(2) .svc_front img {
 	margin-bottom: 0;
 	margin-top: -2rem;
 }
@@ -739,16 +778,28 @@ div > div > div:nth-child(2) .svc img {
 
 /* projects */
 .projects{
+	display: flex;
+	justify-content: center;
 	position: relative;
 	background: var(--secondary-color);
+}
+
+.projects_contain > div:nth-of-type(1){
+	position: relative;
+}
+
+#projects{
+	margin-top: -100px;
+}
+
+.projects_contain{
+	display: block;
+	width: fit-content;
+	max-width: 1600px;
 	padding: 25rem 5rem 100px 5rem;
 }
 
-.projects > div:nth-of-type(1){
-	position: relative;
-}
-
-.content_projects{
+.cards_contain{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem;
@@ -756,7 +807,7 @@ div > div > div:nth-child(2) .svc img {
 
 .project{
 	background: var(--tertiary-color);
-	height: 550px;
+	height: auto;
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
@@ -768,19 +819,19 @@ div > div > div:nth-child(2) .svc img {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 45%;
+	height: 257px;
 	width: 100%;
 }
 
-.content_projects div:nth-child(2) div:nth-child(1){
+.cards_contain div:nth-child(2) div:nth-child(1){
 	background-image: url('../images/project2.jpg');
 }
 
-.content_projects div:nth-child(3) div:nth-child(1){
+.cards_contain div:nth-child(3) div:nth-child(1){
 	background-image: url('../images/project3.jpg');
 }
 
-.content_projects div:nth-child(4) div:nth-child(1){
+.cards_contain div:nth-child(4) div:nth-child(1){
 	background-image: url('../images/project4.jpg');
 }
 
@@ -888,6 +939,9 @@ div > div > div:nth-child(2) .svc img {
 .content_contact{
 	position: relative;
 	display: grid;
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
 	grid-template-columns: 1fr 1fr;
 	gap: 10rem;
 	padding: 100px 12rem;
