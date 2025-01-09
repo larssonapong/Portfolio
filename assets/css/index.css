@@ -630,7 +630,6 @@ header > div:first-of-type {
 	position: absolute;
 	margin-top: -25rem;
 	width: 100%;
-	height: 1px;
 }
 
 .services_content{
@@ -641,6 +640,7 @@ header > div:first-of-type {
 	margin: 0 auto;
 	width: 100%;
     max-width: 1600px;
+	/* background: gray; */
 }
 
 .content_card{
@@ -914,7 +914,7 @@ div > div > div:nth-child(2) .svc_front img {
 
 .show_more{
 	display: flex;
-	padding: 3rem 0 0;
+	padding: 1rem 0 0;
 }
 
 .show_more a{
