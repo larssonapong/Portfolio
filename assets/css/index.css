@@ -41,6 +41,21 @@ html {
 	scroll-behavior: smooth !important;
 }
 
+::-webkit-scrollbar{
+	width: 7px;
+	background: #424242;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: var(--primary-color);
+	border-radius: 50px;
+}
+
+::selection{
+	background: var(--primary-color);
+	color: var(--text-color);
+}
+
 /* assets */
 .btn {
 	padding: 8px 24px;
@@ -514,11 +529,12 @@ header > div:first-of-type {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding: 100px 5rem 32rem 100px;
+	padding: 100px 5rem 32rem 5rem;
 	width: 100%;
     max-width: 1600px;
     margin: 0 auto;
 }
+
 /* profile */
 .about_profile {
 	position: relative;
