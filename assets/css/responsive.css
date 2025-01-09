@@ -1,12 +1,12 @@
-/* footer {
+footer {
     display: none;
-} */
+}
 
-/* .services,
+.services,
 .projects,
 .contact {
     display: none;
-} */
+}
 
 @media screen and (min-width: 1601px) {
     .home_profile {
@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 1379px) {
+@media screen and (max-width: 1399px) {
 
     /* home */
     .home_profile {
@@ -28,6 +28,17 @@
     }
 
     /* home */
+
+    /* about */
+    .about_content {
+        gap: 5rem;
+    }
+
+    .about_profile {
+        width: 500px;
+    }
+
+    /* about */
 }
 
 @media screen and (max-width: 1279px) {
@@ -73,6 +84,23 @@
     }
 
     /* home */
+
+    /* about */
+    .about_content {
+        gap: 5rem;
+    }
+
+    .about_profile {
+        width: 480px;
+        height: 500px;
+    }
+
+    .about_content div:nth-child(2) p {
+        max-width: 500px;
+        font-size: 14px;
+    }
+
+    /* about */
 }
 
 @media screen and (max-width: 1150px) {
@@ -97,6 +125,23 @@
     }
 
     /* home */
+
+    /* about */
+    .about_content {
+        gap: 5rem;
+        place-items: center;
+    }
+
+    .about_profile {
+        width: 400px;
+        height: 460px;
+    }
+
+    .about_infos {
+        margin-bottom: 2rem;
+    }
+
+    /* about */
 }
 
 @media screen and (max-width: 1023px) {
@@ -125,6 +170,11 @@
         font-size: 12px;
     }
 
+    .btn2 {
+        padding: 6px 20px;
+        font-size: 12px;
+    }
+
     .social a {
         height: 30px;
         width: 30px;
@@ -132,6 +182,26 @@
     }
 
     /* home */
+
+    /* about */
+    .about_content {
+        gap: 4rem;
+    }
+
+    .about_profile {
+        width: 360px;
+        height: 420px;
+    }
+
+    .about_infos {
+        gap: 1rem;
+    }
+
+    .about_infos div span{
+        font-size: 14px;
+    }
+
+    /* about */
 }
 
 @media screen and (max-width: 991px) {
@@ -182,6 +252,36 @@
         max-width: 340px;
     }
 
+    /* home */
+
+    /* about */
+    .about_content {
+        gap: 4rem;
+        padding: 100px 3rem 32rem 3rem;
+    }
+
+    .about_profile {
+        width: 320px;
+        height: 400px;
+    }
+
+    .about_infos {
+        gap: 1rem;
+    }
+
+    .about_content div:nth-child(2) p{
+        font-size: 12px;
+    }
+    
+    .about_infos div span{
+        font-size: 12px;
+    }
+
+    .titles{
+        font-size: 32px;
+    }
+    /* about */
+
 }
 
 @media screen and (max-width: 874px) {
@@ -225,6 +325,13 @@
     }
 
     /* home */
+
+    /* about */
+    .about_profile {
+        width: 300px;
+        height: 360px;
+    }
+    /* about */
 }
 
 @media screen and (max-width: 767px) {
@@ -277,8 +384,8 @@
     /* header */
 
     /* home */
-    
-    .home_content{
+
+    .home_content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -287,6 +394,20 @@
     }
 
     /* home */
+
+    /* about */
+    .about_content{
+        grid-template-columns: 1fr;
+        padding: 80px 2rem 32rem 2rem;
+    }
+
+    .about_profile {
+        width: 300px;
+        height: 360px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    /* about */
 }
 
 @media screen and (max-width: 480px) {
@@ -342,10 +463,11 @@
     .home_content>div:nth-child(1) p {
         font-size: 10px;
     }
+
     /* header */
 
     /* home */
-    .home_content{
+    .home_content {
         padding: 7rem 2rem 80px;
     }
 
@@ -353,6 +475,7 @@
         height: 280px;
         width: 280px;
     }
+
     /* home */
 }
 
@@ -398,7 +521,7 @@
     /* header */
 
     /* home */
-    .home_content>div:nth-child(1) div:nth-of-type(2){
+    .home_content>div:nth-child(1) div:nth-of-type(2) {
         flex-direction: column;
         align-items: start;
     }
@@ -407,7 +530,7 @@
         font-size: 25px;
     }
 
-    .home_content{
+    .home_content {
         padding: 7rem 1rem 80px;
         gap: 3rem;
     }
@@ -416,5 +539,19 @@
         height: 200px;
         width: 200px;
     }
+
     /* home */
+    
+    /* about */
+    .about_content{
+        padding: 50px 2rem 32rem 2rem;
+    }
+
+    .about_profile {
+        width: 260px;
+        height: 320px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    /* about */
 }

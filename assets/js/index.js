@@ -156,11 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // bouton & menu burger
     let isburger = false;
+    let span1 = burger.firstElementChild;
+    let span2 = burger.children[1];
+    let span3 = burger.lastElementChild;
+    let navul = navbar.firstElementChild;
+    
     burger.addEventListener('click', () => {
-        let span1 = burger.firstElementChild;
-        let span2 = burger.children[1];
-        let span3 = burger.lastElementChild;
-        let navul = navbar.firstElementChild;
         let jiophone = navbar.classList.contains('jiophone');
 
         if (!isburger) {
@@ -192,4 +193,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // fermeture du menu lors du click des onglets
+    onglets.forEach((onglet) => {
+        onglet.addEventListener('click', () => {
+            if (isburger) {
+                navbar.classList.remove('active');
+                navul.style.opacity = "0";
+
+                span1.style.transform = "rotateZ(0deg) translateY(0px) translateX(0px)";
+                span1.style.width = "80%";
+                span3.style.transform = "rotateZ(0deg) translateY(0px) translateX(0px)";
+                span3.style.width = "80%";
+                span2.style.opacity = "1";
+
+                isburger = false;
+            }
+        });
+    });
 });
