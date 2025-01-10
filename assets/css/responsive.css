@@ -1,12 +1,3 @@
-footer {
-    display: none;
-}
-
-.projects,
-.contact {
-    display: none;
-}
-
 @media screen and (min-width: 1601px) {
     .home_profile {
         margin-right: 0px;
@@ -44,6 +35,15 @@ footer {
         justify-content: space-between;
         gap: 3rem;
     }
+
+    /* services */
+
+    /* contact */
+    .content_contact {
+        gap: 5rem;
+    }
+
+    /* contact */
 }
 
 @media screen and (max-width: 1279px) {
@@ -180,6 +180,75 @@ footer {
     }
 
     /* services */
+
+    /* projects */
+    .projects_contain {
+        padding: 23rem 5rem 100px 5rem;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 500px;
+    }
+
+    .content_contact form div:nth-of-type(1) input,
+    .content_contact form div:nth-of-type(2) input {
+        padding: 0.7rem 1.2rem;
+        font-size: 14px;
+    }
+
+    .content_contact form div:nth-of-type(1) span,
+    .content_contact form div:nth-of-type(2) span {
+        top: 0.7rem;
+        left: 1.2rem;
+        font-size: 14px;
+    }
+
+    .content_contact form div:nth-of-type(3) textarea {
+        height: 150px;
+        padding: 0.7rem 1.2rem;
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+    }
+
+    .content_contact form div:nth-of-type(3) span {
+        top: 0.7rem;
+        left: 1.2rem;
+        font-size: 14px;
+    }
+
+    .content_contact form div:nth-of-type(4) .btn2 {
+        padding: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .content_contact form div:nth-of-type(1) input:focus~span,
+    .content_contact form div:nth-of-type(2) input:focus~span,
+    .content_contact form div:nth-of-type(1) input:valid~span,
+    .content_contact form div:nth-of-type(2) input:valid~span,
+    .content_contact form div:nth-of-type(3) textarea:focus~span,
+    .content_contact form div:nth-of-type(3) textarea:valid~span {
+        font-size: 10px;
+    }
+
+    /* contact */
+
+    /* footer */
+    .foot_onglets li a {
+        font-size: 14px;
+    }
+
+    .foot_social li a {
+        font-size: 12px;
+    }
+
+    .foot_end {
+        font-size: 12px;
+    }
+
+    /* footer */
 }
 
 @media screen and (max-width: 1150px) {
@@ -296,6 +365,20 @@ footer {
 
     /* services */
 
+    /* projects */
+    .projects_contain {
+        padding: 20rem 5rem 100px 5rem;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 420px;
+    }
+
+    /* contact */
 }
 
 @media screen and (max-width: 1023px) {
@@ -371,7 +454,7 @@ footer {
         margin-top: -23rem;
     }
 
-    .svc_card{
+    .svc_card {
         height: 260px;
         width: 260px;
     }
@@ -394,17 +477,17 @@ footer {
         margin-bottom: 1rem;
     }
 
-    .svc_back .content1 > div:nth-child(1){
+    .svc_back .content1>div:nth-child(1) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 1rem;
     }
 
-    .svc_back .content1 > div:nth-child(1) h3{
+    .svc_back .content1>div:nth-child(1) h3 {
         grid-column: 1 / 3;
     }
 
-    .svc_back .content1 > div:nth-child(2){
+    .svc_back .content1>div:nth-child(2) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -414,20 +497,50 @@ footer {
         border: none;
     }
 
-    .svc_back .content1 h3 ~ span i{
+    .svc_back .content1 h3~span i {
         margin-right: 0.5rem;
     }
-    
-    .svc_back .content1 h3 ~ span img{
+
+    .svc_back .content1 h3~span img {
         width: 14px;
         height: 14px;
         margin-right: 0.3rem;
     }
 
-    .svc_back .content2{
+    .svc_back .content2 {
         margin-bottom: 1rem;
     }
+
     /* services */
+
+    /* projects */
+
+    .project div:nth-child(2) h2 {
+        font-size: 20px;
+    }
+
+    .project div:nth-child(2) p:nth-of-type(1),
+    .project div:nth-child(2) p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    .project div:nth-child(2) div span {
+        font-size: 14px;
+    }
+
+    .project div:nth-child(1) {
+        height: 200px;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 340px;
+    }
+
+    /* contact */
 }
 
 @media screen and (max-width: 991px) {
@@ -510,7 +623,7 @@ footer {
     /* about */
 
     /* services */
-    .services_content{
+    .services_content {
         padding: 100px 3rem;
     }
 
@@ -519,16 +632,43 @@ footer {
         gap: 1.5rem;
     }
 
-    .svc_back h2{
+    .svc_back h2 {
         margin-bottom: 1rem;
     }
 
-    .svc_back h3{
+    .svc_back h3 {
         margin-bottom: 0.5rem;
     }
 
-    .svc_back .content2{
+    .svc_back .content2 {
         margin-top: 0;
+    }
+
+    /* services */
+
+    /* projects */
+    .projects_contain {
+        padding: 20rem 3rem 100px;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 340px;
+    }
+
+    .content_contact {
+        padding: 100px 3rem;
+        gap: 3rem;
+    }
+
+    /* contact */
+
+    /* footer */
+    footer {
+        padding: 2rem 3rem;
     }
 }
 
@@ -660,7 +800,7 @@ footer {
     /* about */
 
     /* services */
-    .services_content{
+    .services_content {
         position: relative;
         top: 0;
         display: block;
@@ -668,24 +808,49 @@ footer {
         background: var(--tertiary-color);
     }
 
-    #services{
+    #services {
         position: absolute;
         margin-top: 0;
         width: 100%;
     }
 
-    .content_card{
+    .content_card {
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 3rem;
     }
+
     /* services */
 
     /* projects */
-    .projects_contain{
+    .projects_contain {
         padding: 100px 3rem;
     }
+
     /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 360px;
+        grid-row: 2 / 3;
+    }
+
+    .content_contact {
+        padding: 100px 3rem;
+        gap: 3rem;
+        grid-template-columns: 1fr;
+        width: fit-content;
+        /* place-items: center; */
+    }
+
+    /* contact */
+}
+
+@media screen and (max-width: 500px) {
+    .cards_contain {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -760,25 +925,136 @@ footer {
     .about_content {
         /* padding: 80px 2rem 100px 2rem; */
     }
+
     /* about */
 
     /* services */
-    .services_content{
+    .services_content {
         padding: 100px 1rem;
     }
 
-    .titles{
+    .titles {
         margin-bottom: 3rem;
         font-size: 28px;
     }
+
     /* services */
+
+    /* projects */
+    .cards_contain {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .projects_contain {
+        padding: 100px 2rem;
+    }
+
+    .project div:nth-child(2) {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    .project div:nth-child(2) h2 {
+        font-size: 18px;
+    }
+
+    .project div:nth-child(2) p:nth-of-type(1),
+    .project div:nth-child(2) p:nth-of-type(2) {
+        font-size: 12px;
+    }
+
+    .project div:nth-child(2) div span {
+        font-size: 12px;
+    }
+
+    .show_more a {
+        font-size: 12px;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 290px;
+        grid-row: 2 / 3;
+        padding: 1.5rem 1rem;
+    }
+
+    .content_contact {
+        padding: 100px 2rem;
+    }
+
+    .content_contact form div:nth-of-type(1),
+    .content_contact form div:nth-of-type(2) {
+        margin-bottom: 1.5rem;
+    }
+
+    .content_contact form div:nth-of-type(3) textarea {
+        height: 120px;
+    }
+
+    .content_contact form div:nth-of-type(1) input,
+    .content_contact form div:nth-of-type(2) input,
+    .content_contact form div:nth-of-type(1) span,
+    .content_contact form div:nth-of-type(2) span,
+    .content_contact form div:nth-of-type(3) textarea,
+    .content_contact form div:nth-of-type(3) span {
+        font-size: 12px;
+    }
+
+    .content_contact form div:nth-of-type(1) input:focus~span,
+    .content_contact form div:nth-of-type(2) input:focus~span,
+    .content_contact form div:nth-of-type(1) input:valid~span,
+    .content_contact form div:nth-of-type(2) input:valid~span,
+    .content_contact form div:nth-of-type(3) textarea:focus~span,
+    .content_contact form div:nth-of-type(3) textarea:valid~span {
+        font-size: 8px;
+    }
+
+    /* contact */
+
+    /* footer */
+    footer {
+        padding: 2rem 2rem;
+    }
+
+    .foot_onglets li a {
+        font-size: 12px;
+    }
+
+    .foot_social li a {
+        font-size: 10px;
+    }
+
+    .foot_end {
+        font-size: 10px;
+    }
+
+    .foot_social,
+    .foot_onglets {
+        margin-bottom: 1rem;
+    }
+
+    .foot_onglets {
+        gap: 1rem;
+    }
+
+    .foot_end p:nth-of-type(2) {
+        font-size: 8px;
+    }
+
+    /* footer */
 }
 
 @media screen and (max-width: 360px) {
 
     /* header */
     header>div:first-of-type {
-        padding: 1rem 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #burger {
+        height: 23px;
     }
 
     .logo {
@@ -804,10 +1080,6 @@ footer {
         font-size: 14px;
     }
 
-    /* .navbar.jiophone ul{
-        margin: 30px auto;
-    } */
-
     .navbar ul li a {
         font-size: 12px;
         padding-bottom: 2px;
@@ -822,11 +1094,11 @@ footer {
     }
 
     .home_content>div:nth-child(1) div:nth-of-type(1) h2 {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .home_content {
-        padding: 7rem 1rem 80px;
+        padding: 5rem 1rem 50px;
         gap: 3rem;
     }
 
@@ -839,8 +1111,8 @@ footer {
 
     /* about */
     .about_content {
-        padding: 50px 1rem 100px 1rem;
-        
+        padding: 50px 1rem 50px 1rem;
+
     }
 
     .about_profile {
@@ -851,25 +1123,123 @@ footer {
         margin: 0 auto;
     }
 
-    .titles{
+    .titles {
         font-size: 20px;
         margin-bottom: 2rem;
     }
 
-    .about_content > div:nth-of-type(2) > div:nth-of-type(2){
+    .about_content>div:nth-of-type(2)>div:nth-of-type(2) {
         flex-wrap: wrap;
         gap: 1.5rem;
         justify-content: start;
     }
 
-    .about_infos{
+    .about_infos {
         display: flex;
         flex-direction: column;
     }
+
     /* about */
 
     /* services */
-    .services_content{
+    .services_content {
         padding: 50px 1rem;
     }
+
+    /* services */
+
+    /* projects */
+    .cards_contain {
+        grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+    }
+
+    .projects_contain {
+        padding: 50px 1rem;
+    }
+
+    .project div:nth-child(2) {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    .project div:nth-child(2) h2 {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .project div:nth-child(2) p:nth-of-type(1),
+    .project div:nth-child(2) p:nth-of-type(2) {
+        font-size: 10px;
+        margin-bottom: 0.5rem;
+    }
+
+    .project div:nth-child(2) div span {
+        font-size: 10px;
+    }
+
+    .project div:nth-child(1) {
+        height: 150px;
+    }
+
+    .show_more a {
+        font-size: 10px;
+    }
+
+    #projects {
+        margin-top: -50px;
+    }
+
+    /* projects */
+
+    /* contact */
+    .content_contact form {
+        width: 100%;
+        min-width: 200px;
+        grid-row: 2 / 3;
+        padding: 1.5rem 1rem;
+    }
+
+    .content_contact {
+        padding: 50px 1rem;
+    }
+
+    .content_contact form div:nth-of-type(1),
+    .content_contact form div:nth-of-type(2) {
+        margin-bottom: 1.5rem;
+    }
+
+    .content_contact form div:nth-of-type(3) textarea {
+        height: 100px;
+    }
+
+    .content_contact form div:nth-of-type(1) input,
+    .content_contact form div:nth-of-type(2) input,
+    .content_contact form div:nth-of-type(1) span,
+    .content_contact form div:nth-of-type(2) span,
+    .content_contact form div:nth-of-type(3) textarea,
+    .content_contact form div:nth-of-type(3) span {
+        font-size: 10px;
+    }
+
+    /* contact */
+
+    /* footer */
+
+    footer{
+        padding: 2rem 1rem;
+    }
+    .foot_social,
+    .foot_onglets {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .foot_onglets{
+        gap: 0 1rem;
+    }
+
+    .foot_social{
+        gap: 0;
+    }
+    /* footer */
 }

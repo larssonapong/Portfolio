@@ -640,7 +640,6 @@ header > div:first-of-type {
 	margin: 0 auto;
 	width: 100%;
     max-width: 1600px;
-	/* background: gray; */
 }
 
 .content_card{
@@ -817,7 +816,7 @@ div > div > div:nth-child(2) .svc_front img {
 
 .cards_contain{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
 	gap: 3rem;
 }
 
@@ -835,7 +834,7 @@ div > div > div:nth-child(2) .svc_front img {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 257px;
+	height: 250px;
 	width: 100%;
 }
 
@@ -852,9 +851,10 @@ div > div > div:nth-child(2) .svc_front img {
 }
 
 .project div:nth-child(2){
-	padding: 1rem 1.5rem;
-	height: 55%;
+	padding: 1.5rem 1.5rem 2rem;
+	height: auto;
 	width: 100%;
+	flex-grow: 1;
 }
 
 .project div:nth-child(2) h2{
@@ -881,14 +881,20 @@ div > div > div:nth-child(2) .svc_front img {
 	margin-bottom: 1rem;
 }
 
-.project div:nth-child(2) p:nth-of-type(2) span{
+.project div:nth-child(2) p:nth-of-type(2) > span{
 	font-weight: 400;
 	color: var(--primary-color);
 }
 
+.project div:nth-child(2) p:nth-of-type(2) > span em:hover{
+	text-decoration: underline;
+	cursor: pointer;
+	transition: all .3s;
+}
+
 .project div:nth-child(2) div{
 	display: flex;
-	gap: 35%;
+	justify-content: space-between;
 }
 
 .project div:nth-child(2) div a,
@@ -897,12 +903,10 @@ div > div > div:nth-child(2) .svc_front img {
 	transition: all .3s;
 }
 
-.project div:nth-child(2) div span{
-	transition: all .3s;
-}
-
 .project div:nth-child(2) div span:hover{
-	border-bottom: 1px solid var(--primary-color);
+	text-decoration: underline;
+	color: var(--primary-color);
+	transition: all .3s;
 }
 
 .project div:nth-child(2) div span:hover i,
@@ -959,8 +963,9 @@ div > div > div:nth-child(2) .svc_front img {
 	max-width: 1600px;
 	margin: 0 auto;
 	grid-template-columns: 1fr 1fr;
-	gap: 10rem;
-	padding: 100px 12rem;
+	/* place-items: center; */
+	/* gap: 10rem; */
+	padding: 100px 5rem;
 	z-index: 1;
 }
 
@@ -970,6 +975,7 @@ div > div > div:nth-child(2) .svc_front img {
 	border-radius: 12px;
 	border: 4px solid var(--primary-color);
 	padding: 2rem 1.5rem;
+	width: 540px;
 }
 
 .content_contact form div:nth-of-type(1) p,
@@ -1083,7 +1089,6 @@ div > div > div:nth-child(2) .svc_front img {
 /* form */
 
 /* contact info */
-
 .contact_info > h2{
 	text-align: start;
 	margin-bottom: 3rem;
@@ -1148,12 +1153,11 @@ div > div > div:nth-child(2) .svc_front img {
 
 footer{
     background: var(--secondary-color);
-    padding: 2rem 12rem;
+    padding: 3rem 5rem;
     text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 50px;
 }
 
 .foot_onglets{

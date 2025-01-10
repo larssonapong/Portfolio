@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('scroll', () => {
             let rect = ancre.getBoundingClientRect();
 
-            if (rect.top <= 0) {
+            if (rect.top <= 1) {
                 onglets.forEach((onglet) => {
                     onglet.classList.remove("active");
                 });
