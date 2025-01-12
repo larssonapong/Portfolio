@@ -186,6 +186,23 @@
         padding: 23rem 5rem 100px 5rem;
     }
 
+    .project div:nth-child(2) h2 {
+        font-size: 18px;
+    }
+
+    .project div:nth-child(2) p:nth-of-type(1),
+    .project div:nth-child(2) p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    .project div:nth-child(2) div span {
+        font-size: 14px;
+    }
+
+    .show_more a {
+        font-size: 14px;
+    }
+
     /* projects */
 
     /* contact */
@@ -231,6 +248,28 @@
     .content_contact form div:nth-of-type(3) textarea:focus~span,
     .content_contact form div:nth-of-type(3) textarea:valid~span {
         font-size: 10px;
+    }
+
+    .contact_info>h2 {
+        margin-bottom: 2rem;
+    }
+
+    .contact_info>p {
+        font-size: 14px;
+    }
+
+    .contact_location i,
+    .contact_phone i {
+        font-size: 1.5rem;
+    }
+
+    .contact_location span p:nth-child(1),
+    .contact_phone span p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .contact_social h3 {
+        font-size: 14px;
     }
 
     /* contact */
@@ -921,13 +960,6 @@
 
     /* home */
 
-    /* about */
-    .about_content {
-        /* padding: 80px 2rem 100px 2rem; */
-    }
-
-    /* about */
-
     /* services */
     .services_content {
         padding: 100px 1rem;
@@ -1046,7 +1078,7 @@
     /* footer */
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
 
     /* header */
     header>div:first-of-type {
@@ -1225,21 +1257,23 @@
 
     /* footer */
 
-    footer{
+    footer {
         padding: 2rem 1rem;
     }
+
     .foot_social,
     .foot_onglets {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .foot_onglets{
+    .foot_onglets {
         gap: 0 1rem;
     }
 
-    .foot_social{
+    .foot_social {
         gap: 0;
     }
+
     /* footer */
 }

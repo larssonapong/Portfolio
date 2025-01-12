@@ -14,17 +14,24 @@
 	/* Fonts */
 	--primary-font: "Poppins", sans-serif;
 	--secondary-font: "Roboto", sans-serif;
+
+	/* curseurs */
+	--cursor-default: url('../images/design/normal.cur'), auto;
+	--cursor-hover: url('../images/design/hoving.cur'), pointer;
+	--cursor-focus: url('../images/design/normal.cur'), pointer;
+	--cursor-text: url('../images/design/text.cur'), text;
 }
 
 .light_mode {
-    --primary-color: #389883;
-    --secondary-color: #ffffff;
-    --tertiary-color: #f0f0f0;
-    --quaternary-color: #e0e0e0;
-    --text-color: #121315;
-    --senary-color: #f5f5f5;
-    --hovering-color: #5fd1bb;     
-    --filter-color: #ffffff; 
+    /* Light Mode */
+    --primary-color: #2a9d8f;
+    --secondary-color: #c4c4c4;
+    --tertiary-color: #e6e6e6;
+    --quaternary-color: #acacac;
+    --text-color: #444444;
+    --senary-color: #e0e0e0;
+    --hovering-color: #268f78;
+    --filter-color: #f0f0f0; 
 }
 
 * {
@@ -39,6 +46,22 @@
 
 html {
 	scroll-behavior: smooth !important;
+}
+
+html, body{
+	cursor: var(--cursor-default);
+}
+
+a:hover, button:hover, label:hover{
+	cursor: var(--cursor-hover);
+}
+
+a:active, input:active, button:active{
+	cursor: var(--cursor-hover);
+}
+
+input:hover,  input:active, textarea:hover{
+	cursor: var(--cursor-text);
 }
 
 ::-webkit-scrollbar{
