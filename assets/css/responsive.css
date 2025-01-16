@@ -216,38 +216,15 @@
         font-size: 14px;
     }
 
-    .content_contact form div:nth-of-type(1) span,
-    .content_contact form div:nth-of-type(2) span {
-        top: 0.7rem;
-        left: 1.2rem;
-        font-size: 14px;
-    }
-
     .content_contact form div:nth-of-type(3) textarea {
         height: 150px;
         padding: 0.7rem 1.2rem;
-        font-size: 14px;
-        margin-bottom: 1.5rem;
-    }
-
-    .content_contact form div:nth-of-type(3) span {
-        top: 0.7rem;
-        left: 1.2rem;
         font-size: 14px;
     }
 
     .content_contact form div:nth-of-type(4) .btn2 {
         padding: 0.7rem;
         margin-bottom: 1rem;
-    }
-
-    .content_contact form div:nth-of-type(1) input:focus~span,
-    .content_contact form div:nth-of-type(2) input:focus~span,
-    .content_contact form div:nth-of-type(1) input:valid~span,
-    .content_contact form div:nth-of-type(2) input:valid~span,
-    .content_contact form div:nth-of-type(3) textarea:focus~span,
-    .content_contact form div:nth-of-type(3) textarea:valid~span {
-        font-size: 10px;
     }
 
     .contact_info>h2 {
@@ -703,6 +680,12 @@
         gap: 3rem;
     }
 
+    .content_contact form div:nth-of-type(1) input,
+    .content_contact form div:nth-of-type(2) input,
+    .content_contact form div:nth-of-type(3) textarea {
+        padding: 0.4rem 0.6rem;
+    }
+
     /* contact */
 
     /* footer */
@@ -880,7 +863,6 @@
         gap: 3rem;
         grid-template-columns: 1fr;
         width: fit-content;
-        /* place-items: center; */
     }
 
     /* contact */
@@ -1027,20 +1009,8 @@
 
     .content_contact form div:nth-of-type(1) input,
     .content_contact form div:nth-of-type(2) input,
-    .content_contact form div:nth-of-type(1) span,
-    .content_contact form div:nth-of-type(2) span,
-    .content_contact form div:nth-of-type(3) textarea,
-    .content_contact form div:nth-of-type(3) span {
+    .content_contact form div:nth-of-type(3) textarea {
         font-size: 12px;
-    }
-
-    .content_contact form div:nth-of-type(1) input:focus~span,
-    .content_contact form div:nth-of-type(2) input:focus~span,
-    .content_contact form div:nth-of-type(1) input:valid~span,
-    .content_contact form div:nth-of-type(2) input:valid~span,
-    .content_contact form div:nth-of-type(3) textarea:focus~span,
-    .content_contact form div:nth-of-type(3) textarea:valid~span {
-        font-size: 8px;
     }
 
     /* contact */
@@ -1102,6 +1072,7 @@
     .theme::after {
         width: 18px;
         height: 18px;
+        left: 4px;
     }
 
     .theme i:nth-child(1) {

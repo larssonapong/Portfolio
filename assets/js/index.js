@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = document.getElementById('message');
     const submit = document.querySelector('button[type="submit"]');
     const form = document.querySelector('.form');
+    const home_profile = document.querySelector(".home_profile");
 
     // Gestion du mode
     let mode = localStorage.getItem('theme');
@@ -210,4 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // animation du profile
+    setTimeout(() => {
+        home_profile.classList.add("home_profile_anim");
+    }, 1700);
 });
