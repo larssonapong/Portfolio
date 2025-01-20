@@ -76,12 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let isemail = false;
     let ismessage = false;
 
+    // Événement de soumission du formulaire
+    form.addEventListener('submit', (event) => {
+        // Vérifier si tous les champs sont valides
+        if (!isname || !isemail || !ismessage) {
+            event.preventDefault();
+            alert("Please fill in all fields correctly before submitting the form.");
+        }
+    });
+
     // Validation du nom
     name[0].addEventListener('input', () => {
         const regex = /^[a-zA-Z]{3,12}(\s[a-zA-Z]{3,12}){0,2}$/;
         const valid = regex.test(name[0].value);
         const value = name[0].value;
-        const error = name[0].nextElementSibling.nextElementSibling;
+        const error = name[0].nextElementSibling;
 
         if (value.length < 3 && value !== "") {
             error.textContent = "Name must contain at least 3 characters.";
@@ -98,16 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
             error.style.display = 'block';
             isname = false;
         }
-
-        // Mettre à jour l'état du bouton de soumission
-        submit.disabled = !(isname && isemail && ismessage);
     });
 
     // Validation de l'email
     email[0].addEventListener('input', () => {
         const regex = /^[a-zA-Z0-9._%+-]{3,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i;
         const valid = regex.test(email[0].value);
-        const error = email[0].nextElementSibling.nextElementSibling;
+        const error = email[0].nextElementSibling;
 
         if (valid) {
             error.style.display = 'none';
@@ -120,9 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
             error.style.display = 'block';
             isemail = false;
         }
-
-        // Mettre à jour l'état du bouton de soumission
-        submit.disabled = !(isname && isemail && ismessage);
     });
 
     // Validation du message
@@ -130,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const regex = /^[\p{L}0-9@#%.()';:+-_!?$&*\s]{1,}$/u;
         const valid = regex.test(message.value);
         const saisie = message.value;
-        const error = message.nextElementSibling.nextElementSibling;
+        const error = message.nextElementSibling;
 
         if (valid && saisie.length > 500) {
             error.textContent = "Message is too long (maximum 500 characters).";
@@ -144,13 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             error.style.display = 'block';
             ismessage = false;
         }
-
-        // Mettre à jour l'état du bouton de soumission
-        submit.disabled = !(isname && isemail && ismessage);
     });
-
-    // Désactiver le bouton de soumission par défaut
-    submit.disabled = true;
+    
 
     // Gestion du responsive
     navbar.style.top = `${headh}px`;
@@ -161,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let span2 = burger.children[1];
     let span3 = burger.lastElementChild;
     let navul = navbar.firstElementChild;
-    
+
     burger.addEventListener('click', () => {
         let jiophone = navbar.classList.contains('jiophone');
 
@@ -216,4 +214,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         home_profile.classList.add("home_profile_anim");
     }, 1700);
+
 });
