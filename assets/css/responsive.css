@@ -348,7 +348,7 @@
     }
 
     .svc_back .content1 span p,
-    .svc_back .content2 span p{
+    .svc_back .content2 span p {
         font-size: 12px;
     }
 
@@ -765,10 +765,6 @@
 
     .navbar.active {
         height: 300px;
-
-        @media screen and (max-width: 360px) {
-            height: 260px;
-        }
     }
 
     .navbar ul {
@@ -777,10 +773,6 @@
         margin: 50px auto;
         opacity: 0;
         transition: all .3s;
-
-        @media screen and (max-width: 360px) {
-            margin: 30px auto;
-        }
     }
 
     .navbar ul li a {
@@ -890,8 +882,8 @@
         font-size: 16px;
     }
 
-    
-    .btn{
+
+    .btn {
         padding: 6px 18px;
     }
 
@@ -1093,9 +1085,17 @@
         font-size: 14px;
     }
 
+    .navbar ul{
+        margin: 30px auto;
+    }
+
     .navbar ul li a {
         font-size: 12px;
         padding-bottom: 2px;
+    }
+
+    .navbar.active {
+        height: 260px;
     }
 
     /* header */
@@ -1160,7 +1160,7 @@
     }
 
     .svc_back,
-    .svc_front{
+    .svc_front {
         padding: 20px;
     }
 
