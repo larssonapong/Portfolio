@@ -926,6 +926,14 @@ div>div>div:nth-child(2) .svc_front img {
 	background-image: url('../images/john-doe.png');
 }
 
+.cards_contain div:nth-child(5) div:nth-child(1) {
+	background-image: url('../images/portfolio-project.png');
+}
+
+.cards_contain div:nth-child(6) div:nth-child(1) {
+	background-image: url('../images/dentelo-design.png');
+}
+
 .project div:nth-child(2) {
 	padding: 1.5rem 1.5rem 2rem;
 	height: auto;
@@ -1169,10 +1177,15 @@ div>div>div:nth-child(2) .svc_front img {
 }
 
 .contact_location span p:nth-child(2),
-.contact_phone span p:nth-child(2) {
+.contact_phone span a:nth-child(2) {
 	color: var(--primary-color);
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
+	transition: all .3s;
+}
+
+.contact_phone span a:nth-child(2):hover {
+	text-decoration: underline;
 }
 
 .contact_location i,
